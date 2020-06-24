@@ -14,13 +14,11 @@ fi
 breakfast $TARGET_DEVICE
 
 # Set parameters
-export ARCH=arm
-#exort PLATFORM=arm-unknown-linux-androideabi
-export PLATFORM=arm-linux-androideabi
-export CROSS_COMPILE=${PLATFORM}-
-export GCC_VERSION=7.x
-#export PATH=$HOME/x-tools/${PLATFORM}/bin:$PATH
-export PATH=${ANDROID_BUILD_TOP}/prebuilts/gcc/${HOST_OS}-x86/${ARCH}/${CROSS_COMPILE}${GCC_VERSION}/bin:$PATH
+export ARCH="arm"
+export PLATFORM="arm-unknown-linux-gnueabi"
+export CROSS_COMPILE="${PLATFORM}-"
+export GCC_VERSION="10.1.0"
+export PATH=${ANDROID_BUILD_TOP}/prebuilts/gcc/linux-x86/${ARCH}/${CROSS_COMPILE}${GCC_VERSION}/bin:$PATH
 
 # CCache
 export USE_CCACHE=1
